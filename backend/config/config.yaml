@@ -1,0 +1,11 @@
+llm:
+  openai:
+    provider: "openai"
+    model_name: "gpt-5"
+  groq:
+    provider: "groq"
+    model_name: llama-3.3-70b-versatile
+  google:
+    provider: "google"
+    model_name: "gemini-2.5-flash"
+  

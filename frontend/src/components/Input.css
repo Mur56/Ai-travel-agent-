@@ -1,0 +1,155 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Input variants */
+.input-default {
+  border-color: #e2e8f0;
+  background: white;
+}
+
+.input-default:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-filled {
+  background: #f7fafc;
+  border-color: #f7fafc;
+}
+
+.input-filled:focus-within {
+  background: white;
+  border-color: #667eea;
+}
+
+.input-outlined {
+  background: transparent;
+  border-color: #e2e8f0;
+}
+
+.input-outlined:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Input states */
+.input-container.has-error {
+  border-color: #f56565;
+}
+
+.input-container.has-error:focus-within {
+  box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.1);
+}
+
+.input-container.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: #f7fafc;
+}
+
+/* Input field */
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  color: #2d3748;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-field.has-icon {
+  padding-left: 0.5rem;
+}
+
+.input-field::placeholder {
+  color: #a0aec0;
+}
+
+.input-field:disabled {
+  cursor: not-allowed;
+}
+
+/* Input icon */
+.input-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 0.75rem;
+  color: #a0aec0;
+}
+
+/* Helper and error messages */
+.input-message {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.input-message.helper {
+  color: #718096;
+}
+
+.input-message.error {
+  color: #f56565;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .input-label {
+    color: #e2e8f0;
+  }
+
+  .input-container {
+    background: #2d3748;
+  }
+
+  .input-default,
+  .input-outlined {
+    border-color: #4a5568;
+  }
+
+  .input-filled {
+    background: #4a5568;
+    border-color: #4a5568;
+  }
+
+  .input-filled:focus-within {
+    background: #2d3748;
+  }
+
+  .input-field {
+    color: white;
+  }
+
+  .input-field::placeholder {
+    color: #718096;
+  }
+
+  .input-message.helper {
+    color: #a0aec0;
+  }
+
+  .input-container.disabled {
+    background: #4a5568;
+  }
+}
